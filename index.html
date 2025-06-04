@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hệ Mặt Trời</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Nhạc nền (sẽ được bật sau khi user click) -->
+    <audio id="bg-music" autoplay loop muted>
+        <source src="./audio/space-music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- Hệ mặt trời -->
+    <div class="container">
+        <div class="sun"><img src="./image/sun.jpg" alt="Sun" /></div>
+
+        <div class="orbit mercury">
+            <div class="planet mercury-planet"></div>
+        </div>
+        <div class="orbit venus">
+            <div class="planet venus-planet"></div>
+        </div>
+        <div class="orbit earth">
+            <div class="planet earth-planet">
+                <div class="moon-orbit">
+                    <div class="moon"></div>
+                </div>
+            </div>
+        </div>
+        <div class="orbit mars">
+            <div class="planet mars-planet"></div>
+        </div>
+        <div class="orbit jupiter">
+            <div class="planet jupiter-planet"></div>
+        </div>
+        <div class="orbit saturn">
+            <div class="planet saturn-planet"></div>
+        </div>
+        <div class="orbit uranus">
+            <div class="planet uranus-planet"></div>
+        </div>
+        <div class="orbit neptune">
+            <div class="planet neptune-planet"></div>
+        </div>
+        <div class="orbit pluto">
+            <div class="planet pluto-planet"></div>
+        </div>
+    </div>
+
+    <!-- Script tạo sao và bật nhạc -->
+    <script src="script.js"></script>
+</body>
+
+</html>
