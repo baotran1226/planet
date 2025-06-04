@@ -16,31 +16,30 @@ function createStars() {
 createStars();
 
 // Bật nhạc khi user click lần đầu
-// Danh sách bài hát theo thứ tự
+// Danh sách các bài hát theo thứ tự
 const songs = [
     "./audio/space-music-1.mp3",
     "./audio/space-music-2.mp3",
-    "./audio/space-music-3.mp3",
-    "./audio/space-music-4.mp3",
+    "./audio/space-music-3.mp3"
 ];
 
 let currentSongIndex = 0;
 const music = document.getElementById("bg-music");
-
-// Khi lần đầu click: bật tiếng & phát nhạc đầu
 let isFirstClick = true;
 
+// Sự kiện click toàn màn hình
 document.addEventListener("click", () => {
     if (isFirstClick) {
+        // Bật tiếng và phát bài đầu tiên
         music.muted = false;
         music.play();
         isFirstClick = false;
-        return;
+    } else {
+        // Phát bài kế tiếp trong danh sách
+        currentSongIndex = (currentSongIndex + 1) % songs.length;
+        music.src = songs[currentSongIndex];
+        music.play();
     }
-
-    // Chuyển sang bài tiếp theo theo thứ tự
-    currentSongIndex = (currentSongIndex + 1) % songs.length;
-    music.src = songs[currentSongIndex];
-    music.play();
 });
+
 
